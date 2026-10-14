@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis Gastos</title>
+  <style>body{font:16px -apple-system,system-ui,sans-serif;text-align:center;padding:3rem 1rem;color:#333}</style>
+</head>
+<body>
+  <p>Volviendo a Mis Gastos…</p>
+  <p><a id="open" href="misgastos://callback">Abrir la app</a></p>
+  <script>
+    // Enable Banking exige una redirect URL HTTPS: esta página reenvía code/state a la app.
+    var target = "misgastos://callback" + window.location.search;
+    document.getElementById("open").href = target;
+    window.location.replace(target);
+  </script>
+</body>
+</html>
